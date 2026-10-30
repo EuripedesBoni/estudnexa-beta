@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0e2345" />
+  <meta name="theme-color" content="#061a35" />
   <meta name="description" content="ESTUDNEXA: seu aplicativo gratuito de estudos, revisões, questões e preparação para residência médica." />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -15,20 +15,22 @@
   
   
   
-  <title>ESTUDNEXA 4.0 — Medicina &amp; Comunidade</title>
+  <title>ESTUDNEXA 5.0 — Medicina &amp; Comunidade</title>
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./premium.css" />
 </head>
 <body>
   <div id="app" hidden>
     <aside class="sidebar" aria-label="Navegação principal">
-      <div class="brand"><div class="brand-mark">✚</div><div><strong>ESTUDNEXA</strong><span>MEDICINA & COMUNIDADE</span></div></div>
+      <div class="brand"><div class="brand-mark"><img src="./icon-192.png" alt=""></div><div><strong>ESTUDNEXA</strong><span>MEDICINA & COMUNIDADE</span></div></div>
       <p class="side-label">ORGANIZE SUA JORNADA</p>
       <nav class="side-nav" id="side-nav"></nav>
       <div class="sidebar-bottom"><span class="online-dot"></span> Seu espaço de estudo<br/><small>Gratuito • Conta individual</small></div>
     </aside>
+    <button type="button" id="drawer-shade" class="drawer-shade" aria-label="Fechar menu" hidden></button>
     <div class="main-shell">
       <header class="topbar">
-        <div class="topbar-brand"><span class="topbar-logo">✚</span><b>ESTUDNEXA</b></div>
+        <div class="topbar-brand"><button id="mobile-menu" type="button" class="mobile-menu" aria-label="Abrir menu de estudos" aria-expanded="false">☰</button><span class="topbar-logo"><img src="./icon-192.png" alt=""></span><b>ESTUDNEXA</b></div>
         <div class="topbar-right"><span id="sync-status" class="cloud-top">☁ Preparando...</span><span id="current-email" class="auth-user"></span><button id="signout-button" type="button" class="btn btn-outline btn-small">Sair</button><span id="top-date"></span><button type="button" id="settings-button" class="icon-button" title="Configurações" aria-label="Configurações">⚙</button></div>
       </header>
       <main id="main-content" tabindex="-1" aria-live="polite"></main>
@@ -40,8 +42,9 @@
   <input type="file" id="import-file" accept="application/json,.json" hidden />
 
 <section id="auth-screen" class="auth-screen" aria-label="Acesso ESTUDNEXA">
+  <div class="welcome-panel"><div class="welcome-orbit"></div><img class="welcome-icon" src="./icon-512.png" alt="Símbolo ESTUDNEXA"><div class="welcome-wordmark">ESTUD<span>NEXA</span></div><div class="welcome-tagline">ESTUDE <i>•</i> CONECTE <i>•</i> EVOLUA</div><p>Conhecimento que conecta. Medicina que transforma.</p><div class="welcome-foot"><span>✧</span> Sua jornada acadêmica começa aqui.</div></div>
   <div class="auth-card">
-    <div class="auth-badge">✚</div><h1>ESTUDNEXA</h1><p>Sua medicina, seus estudos, sua comunidade. No celular e no tablet.</p>
+    <div class="auth-kicker">SUA COMUNIDADE ACADÊMICA</div><h1>Boas-vindas à ESTUDNEXA</h1><p>Seu ambiente de estudos e colaboração, em qualquer dispositivo.</p>
     <div id="auth-banner" class="auth-alert" hidden role="status"></div>
     <div class="auth-tabs" role="tablist"><button type="button" id="tab-login" class="active">Entrar</button><button type="button" id="tab-signup">Criar conta</button></div>
     <form id="auth-form" autocomplete="on">

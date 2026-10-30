@@ -1,7 +1,7 @@
 // MedAtlas 3.0: só arquivos públicos; jamais cachear credenciais ou requisições de autenticação.
-const CACHE='estudnexa-shell-v4-0-20261030';
+const CACHE='estudnexa-shell-v5-0-premium-20261030';
 const PREFIXES=['medatlas-shell-','sinapelia-shell-','estudnexa-shell-'];
-const SHELL=['./','./index.html','./app.js','./community.js','./auth.js','./styles.css','./manifest.webmanifest','./icon-192.png','./icon-512.png','./privacidade.html','./config.js'];
+const SHELL=['./','./index.html','./app.js','./premium.css','./community.js','./auth.js','./styles.css','./manifest.webmanifest','./icon-192.png','./icon-512.png','./privacidade.html','./config.js'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>PREFIXES.some(pre=>k.startsWith(pre))&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{

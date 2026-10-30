@@ -152,7 +152,10 @@
       try{localStorage.removeItem(localKey);localStorage.removeItem(dirtyKey);}catch{}
       await client.auth.signOut();location.reload();
     };
-    $('signout-button').insertAdjacentElement('afterend',deleteButton);
+    deleteButton.id='account-delete-button';
+    const accountMenu=document.querySelector('.sidebar-bottom');
+    if(accountMenu)accountMenu.appendChild(deleteButton);
+    else $('signout-button').insertAdjacentElement('afterend',deleteButton);
   }
   async function flush(){
     if(!client||!user||!dirty||blocked||saving||!window.MedAtlasApp) return;
