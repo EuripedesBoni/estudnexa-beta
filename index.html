@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0e2345" />
+  <meta name="description" content="ESTUDNEXA: seu aplicativo gratuito de estudos, revisões, questões e preparação para residência médica." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="ESTUDNEXA" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="./icon-192.png" />
+  
+  
+  
+  <title>ESTUDNEXA 4.0 — Medicina &amp; Comunidade</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app" hidden>
+    <aside class="sidebar" aria-label="Navegação principal">
+      <div class="brand"><div class="brand-mark">✚</div><div><strong>ESTUDNEXA</strong><span>MEDICINA & COMUNIDADE</span></div></div>
+      <p class="side-label">ORGANIZE SUA JORNADA</p>
+      <nav class="side-nav" id="side-nav"></nav>
+      <div class="sidebar-bottom"><span class="online-dot"></span> Seu espaço de estudo<br/><small>Gratuito • Conta individual</small></div>
+    </aside>
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="topbar-brand"><span class="topbar-logo">✚</span><b>ESTUDNEXA</b></div>
+        <div class="topbar-right"><span id="sync-status" class="cloud-top">☁ Preparando...</span><span id="current-email" class="auth-user"></span><button id="signout-button" type="button" class="btn btn-outline btn-small">Sair</button><span id="top-date"></span><button type="button" id="settings-button" class="icon-button" title="Configurações" aria-label="Configurações">⚙</button></div>
+      </header>
+      <main id="main-content" tabindex="-1" aria-live="polite"></main>
+    </div>
+    <nav class="bottom-nav" id="bottom-nav" aria-label="Menu inferior"></nav>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </div>
+  <dialog id="app-dialog"><div id="dialog-content"></div></dialog>
+  <input type="file" id="import-file" accept="application/json,.json" hidden />
+
+<section id="auth-screen" class="auth-screen" aria-label="Acesso ESTUDNEXA">
+  <div class="auth-card">
+    <div class="auth-badge">✚</div><h1>ESTUDNEXA</h1><p>Sua medicina, seus estudos, sua comunidade. No celular e no tablet.</p>
+    <div id="auth-banner" class="auth-alert" hidden role="status"></div>
+    <div class="auth-tabs" role="tablist"><button type="button" id="tab-login" class="active">Entrar</button><button type="button" id="tab-signup">Criar conta</button></div>
+    <form id="auth-form" autocomplete="on">
+      <label>E-mail<input id="auth-email" type="email" placeholder="seunome@email.com" autocomplete="email" required></label>
+      <label>Senha<input id="auth-password" type="password" placeholder="Mínimo de 8 caracteres" autocomplete="current-password" required minlength="8"></label>
+      <button class="btn btn-primary" type="submit" id="auth-submit">Entrar na ESTUDNEXA</button>
+    </form>
+    <div class="auth-footer"><button class="auth-link" type="button" id="forgot-button">Esqueci minha senha</button><a href="./privacidade.html" target="_blank" rel="noopener">Privacidade</a></div>
+    <p class="auth-help">Cada estudante tem sua própria senha. Nunca compartilhe códigos de recuperação.</p>
+  </div>
+</section>
+<section id="reset-screen" class="auth-screen" aria-label="Nova senha" hidden>
+  <div class="auth-card"><h1>Nova senha</h1><p>Escolha uma senha para sua conta ESTUDNEXA.</p><form id="reset-form"><label>Nova senha<input type="password" id="new-password" minlength="8" required autocomplete="new-password"></label><button class="btn btn-primary">Atualizar senha</button></form></div>
+</section>
+<section id="sync-warning" class="sync-warning" hidden role="alertdialog" aria-label="Conflito de sincronização"><h3>Alterações em dois dispositivos</h3><p>Seus dados locais não serão sobrescritos automaticamente. Exporte um backup antes de escolher.</p><div class="actions"><button type="button" id="choose-cloud" class="btn btn-outline btn-small">Usar dados da nuvem</button><button type="button" id="choose-local" class="btn btn-danger btn-small">Manter dados locais</button></div></section>
+<script src="./config.js"></script>
+<script src="./auth.js" defer></script>
+<script src="./community.js" defer></script>
+<script>
+if ('serviceWorker' in navigator && location.protocol === 'https:') {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(()=>{}));
+}
+</script>
+</body>
+</html>
