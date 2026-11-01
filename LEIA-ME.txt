@@ -1,10 +1,16 @@
-BoniVerso • Correção v1.5.1 — Retomar vídeo no ponto salvo
+BONIVERSO - CORRECAO CONTINUAR ASSISTINDO - V1.5.1
 
-1. No GitHub EuripedesBoni/boniverso-app, branch main, clique Add file > Upload files.
-2. Envie SOMENTE curso-videos.html desta pasta e confirme a substituição do arquivo existente.
-3. Salve em Commit changes e atualize a Videoteca no iPad (Safari) e no computador.
-4. Entre com uma conta de aluno matriculado, reproduza 40 segundos, pause e aguarde a mensagem “Progresso salvo na sua conta”.
-5. Atualize a página; clique em Continuar assistindo e confira o tempo.
+ESTE ZIP DEVE SER DESCOMPACTADO ANTES DO ENVIO AO GITHUB.
 
-A alteração preserva vídeos, módulos, matrícula, player privado e histórico do Supabase.
-Se o Safari não retomar, registre a mensagem abaixo do player para conferirmos o comportamento.
+1) Abra o ZIP no app Arquivos e extraia o arquivo curso-videos.html.
+2) Abra https://github.com/EuripedesBoni/boniverso-app
+3) Na branch main, use Add file > Upload files.
+4) Selecione SOMENTE o curso-videos.html extraido, para a raiz do repositorio.
+5) Confirme a substituicao do arquivo antigo e clique em Commit changes.
+6) Na pagina do arquivo no GitHub, procure pela frase 'Retomando aula a partir de'.
+
+NAO envie o ZIP ao GitHub no lugar do HTML.
+NAO e necessario mexer no Supabase, R2 ou reimportar videos.
+
+Teste: acesse uma conta de aluno, abra a Videoteca de um curso,
+assista ao video, pause, reabra e verifique se retoma do tempo salvo.
