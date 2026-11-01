@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#142643">
+<title>Videoteca do curso | BoniVerso</title>
+<style>
+:root{font:15px/1.5 system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:#203351;background:#f3f6fb;--blue:#255caa;--navy:#142643;--gold:#f0cd89;--line:#dbe5f2}
+*{box-sizing:border-box}body{margin:0}header{background:#132846;color:#fff;padding:14px clamp(16px,4vw,50px);display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}header strong{font-size:23px;letter-spacing:-.6px}header strong span{color:var(--gold)}nav{display:flex;gap:17px;flex-wrap:wrap}nav a{color:#f1d7a7;text-decoration:none;font-size:13px}main{max-width:1260px;margin:auto;padding:22px 15px 70px}.hero{background:linear-gradient(118deg,#162d52,#3266a5);border-radius:21px;color:#fff;padding:25px;box-shadow:0 13px 27px #213e6e18}.hero small{color:#f1d7aa;font-size:11px;letter-spacing:.13em;font-weight:750}.hero h1{font-size:clamp(25px,4vw,38px);margin:8px 0}.hero p{color:#dce9f8;max-width:720px;margin:0}.notice{background:#e8f1ff;border:1px solid #c4d9f5;color:#28528a;border-radius:11px;padding:11px 14px;margin:16px 0}.notice.error{background:#fff0ed;border-color:#eac6bf;color:#973c32}.columns{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.65fr);gap:17px;align-items:start}.panel{border:1px solid var(--line);border-radius:16px;background:#fff;padding:18px;margin:16px 0;box-shadow:0 6px 18px #1d39670a}.panel h2{font-size:20px;margin:0 0 11px}.player{width:100%;aspect-ratio:16/9;max-height:540px;display:block;background:#080e20;border-radius:13px}.placeholder{display:grid;place-content:center;text-align:center;gap:5px;background:linear-gradient(130deg,#0c1b35,#253d5f);color:#e2edff;border-radius:13px;aspect-ratio:16/9;padding:18px}.placeholder b{font-size:24px}.placeholder span{font-size:13px;color:#bdcde5}.player-meta{color:#586f8c;font-size:13px;margin:10px 0;min-height:22px}.actions{display:flex;flex-wrap:wrap;gap:8px;margin:13px 0}.btn,button{font:inherit;border:0;border-radius:10px;background:var(--blue);color:#fff;padding:10px 14px;min-height:43px;cursor:pointer;font-weight:650}button:disabled{opacity:.5;cursor:not-allowed}.btn.secondary,button.secondary{background:#e8eff9;color:#244f89}.btn.danger,button.danger{background:#a73d4a}.btn.outline{background:#fff;color:#285b9c;border:1px solid #cfdded}.btn:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #e6b758;outline-offset:2px}.btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:center}.muted{font-size:12px;color:#687d96}.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin-bottom:14px}.toolbar label{font-weight:700;font-size:13px;display:block;margin-bottom:5px}.toolbar .grow{flex:1;min-width:200px}input,select{font:inherit;border:1px solid #c5d3e8;border-radius:10px;background:white;color:#243a58;padding:10px;min-height:42px;max-width:100%}.toolbar input{width:100%}.module{border-top:1px solid #e2eaf4;padding-top:12px;margin-top:17px}.module h3{font-size:16px;margin:0 0 10px;color:#254c82}.video-row{width:100%;background:#f9fbff;color:#203351;text-align:left;border:1px solid #dee8f5;border-radius:12px;padding:11px 13px;display:flex;align-items:center;gap:11px;margin:7px 0}.video-row:hover{background:#edf4fe}.video-row.current{border-color:#4382d9;background:#ebf3ff}.video-ico{width:39px;height:39px;border-radius:10px;display:grid;place-items:center;background:#e3edfc;flex:none}.video-info{flex:1;min-width:0}.video-info b{display:block;font-size:13px;overflow-wrap:anywhere}.video-info small{display:block;color:#657a94;font-size:11px;margin-top:3px}.progress{height:5px;background:#dce7f6;border-radius:8px;margin-top:7px;overflow:hidden}.progress span{height:100%;background:#287ac1;display:block}.empty{color:#5c728c;padding:17px;border:1px dashed #c2d1e6;border-radius:12px}.teacher{background:#f9fbff;border:1px solid #d4e3f4;border-radius:12px;padding:13px;margin-top:12px}.teacher h3{font-size:16px;margin:0 0 10px}.teacher form{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}.teacher input{flex:1;min-width:125px}.teacher select{width:100%;margin:7px 0}.module-item{padding:9px 0;border-top:1px solid #dfebf5;display:flex;gap:7px;align-items:center;flex-wrap:wrap}.module-item strong{flex:1;min-width:115px}.module-item button{font-size:12px;padding:5px 8px;min-height:32px}.video-admin{display:flex;flex-wrap:wrap;gap:9px;border-top:1px solid #deebf7;padding-top:12px;margin-top:13px}.video-admin label{font-size:12px;font-weight:700}.video-admin select{display:block;margin-top:5px;max-width:240px}.legal{font-size:12px;line-height:1.55;color:#657a91;margin:15px 0}footer{padding:15px 0;color:#70839d;font-size:12px}
+@media(max-width:920px){.columns{grid-template-columns:1fr}}@media(max-width:600px){main{padding:13px 10px 45px}.panel{padding:13px}.hero{padding:19px}.toolbar{display:block}.toolbar>*{margin:8px 0}.video-row{padding:9px}}
+</style>
+</head><body>
+<header><strong>Boni<span>Verso</span> · Videoteca</strong><nav><a href="./">Início</a><a href="./biblioteca-live.html">Biblioteca geral</a><a href="./live-central.html">Aulas ao vivo</a></nav></header>
+<main>
+<section class="hero"><small>RSB EDUCAÇÃO · CONTEÚDO DO CURSO</small><h1 id="courseTitle">Videoteca do curso</h1><p>Lives e gravações do Google Meet no mesmo lugar. Continue de onde parou e explore os módulos no seu ritmo.</p></section>
+<p class="notice" role="status" id="status">Verificando sua matrícula…</p>
+<div class="columns">
+<div>
+<section class="panel" aria-label="Reprodutor de aulas">
+<h2 id="videoTitle">Selecione uma aula</h2>
+<div id="playerHost"><div class="placeholder"><b>▶ Aulas gravadas</b><span>Escolha uma videoaula na lista ao lado ou abaixo.</span></div></div>
+<p id="videoInfo" class="player-meta">Reprodução autorizada somente para estudantes matriculados.</p>
+<div class="actions"><button id="continue" class="secondary" type="button" hidden>▶ Continuar assistindo</button><button id="restart" class="secondary" type="button" hidden>↺ Recomeçar</button><button id="renew" class="secondary" type="button" hidden>↻ Renovar acesso</button></div>
+<p class="muted" id="saveInfo">O progresso de reprodução é salvo na sua conta, para continuar em outro dispositivo.</p>
+</section>
+<section id="admin" class="panel" hidden><h2>⚙️ Organização do professor</h2><p class="muted">Crie módulos e associe os vídeos. Só professores e administradores autorizados podem editar. A exclusão fica nos painéis de gerenciamento.</p><form id="newModule" class="toolbar"><div class="grow"><label for="moduleName">Novo módulo</label><input id="moduleName" required maxlength="120" minlength="2" placeholder="Ex.: Módulo 1 — Introdução"></div><button type="submit">Criar módulo</button></form><div id="moduleControls"></div><div class="actions"><a class="btn secondary" href="./painel-gravacoes.html">Gerenciar lives</a><a class="btn secondary" href="./importar-videos.html">Gerenciar vídeos Meet</a></div></section>
+</div>
+<aside>
+<section class="panel"><div class="toolbar"><div class="grow"><label for="search">Pesquisar aulas</label><input type="search" id="search" placeholder="Título da videoaula"></div></div><div id="list"><div class="empty">Carregando módulos e vídeos…</div></div></section>
+<section class="panel"><h2>Seu progresso</h2><p id="overall">Carregando seu histórico…</p><div class="progress"><span id="overallBar" style="width:0%"></span></div><p class="muted" id="continueHint">Os vídeos assistidos aparecem aqui com o tempo salvo.</p></section>
+</aside>
+</div>
+<p class="legal">Os vídeos ficam em armazenamento privado, com verificação de matrícula e acesso temporário. O botão de download é oculto, mas nenhuma aplicação web impede completamente a gravação da tela ou cópias técnicas. A conclusão registrada indica reprodução do vídeo, não presença acadêmica.</p>
+<footer>© BoniVerso · RSB Educação</footer>
+</main>
+<script src="./config.js"></script>
+<script type="module">
+import {createClient} from 'https://esm.sh/@supabase/supabase-js@2.57.2';
+const cfg=window.BONIVERSO_CONFIG;
+const $=s=>document.getElementById(s);
+const make=(t,v,c)=>{const n=document.createElement(t);if(v!==null&&v!==undefined)n.textContent=String(v);if(c)n.className=c;return n};
+const valid=/^[0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12}$/i;
+const courseId=new URLSearchParams(location.search).get('curso');
+let db,user,staff=false,course=null,items=[],modules=[],progress=new Map(),player=null,active=null,lastSaved=0,saveBusy=false,sessionActive=false,initialResume=null;
+const status=(message,err=false)=>{$('status').textContent=message;$('status').classList.toggle('error',err)};
+const key=v=>v.source+':'+v.id;
+const formatTime=v=>{const s=Math.max(0,Math.round(Number(v)||0));return (s>=3600?Math.floor(s/3600)+':':'')+String(Math.floor(s/60)%60).padStart(2,'0')+':'+String(s%60).padStart(2,'0')};
+const percent=(v)=>{const p=progress.get(key(v));if(!p)return 0;if(p.completed)return 100;return p.duration_seconds>0?Math.min(99,Math.round(p.position_seconds/p.duration_seconds*100)):0};
+function textError(error){return error?.message||'Falha inesperada'}
+async function invoke(functionName,body){const {data,error}=await db.functions.invoke(functionName,{body});if(error){let why=error.message;try{why=(await error.context?.json?.())?.error||why}catch{}throw Error(why)}if(data?.error)throw Error(data.error);return data}
+function getPlayer(){return $('playerHost').querySelector('video')}
+function updateOverall(){const done=items.filter(v=>progress.get(key(v))?.completed).length;const viewed=items.filter(v=>progress.get(key(v))?.position_seconds>0).length;$('overall').textContent=done+' de '+items.length+' vídeo(s) concluído(s)';$('overallBar').style.width=items.length?Math.round(done/items.length*100)+'%':'0%';$('continueHint').textContent=viewed?viewed+' vídeo(s) já iniciado(s) nesta conta.':'Seu histórico aparecerá após iniciar uma aula.'}
+function updateControls(){const p=active?progress.get(key(active)):null;$('continue').hidden=!(active&&p?.position_seconds>5&&!p.completed);$('continue').textContent=p?'▶ Continuar de '+formatTime(p.position_seconds):'▶ Continuar assistindo';$('restart').hidden=!active;$('renew').hidden=!active}
+function playerConfig(v){v.controls=true;v.playsInline=true;v.preload='metadata';v.controlsList='nodownload noremoteplayback';v.disablePictureInPicture=true;v.setAttribute('disableRemotePlayback','');v.setAttribute('aria-label','Reprodução protegida da aula');v.addEventListener('contextmenu',e=>e.preventDefault());}
+// Controle de gravação sequencial: impede sobrescrita por posições antigas.
+let saveQueue=Promise.resolve(),seekPending=false,seekTarget=0,allowRestartZero=false;
+function saveProgress(done=false){
+ if(!player||!active||!user||seekPending)return Promise.resolve();
+ const currentVideo=player,video=active,videoKey=key(video);
+ const duration=Number.isFinite(currentVideo.duration)?Math.min(86400,Math.max(0,Math.round(currentVideo.duration))):null;
+ const seconds=Math.min(86400,Math.max(0,Math.round(currentVideo.currentTime||0)));
+ const old=progress.get(videoKey);
+ // Não zera o progresso durante o início do player, antes de sua retomada.
+ if(seconds<2&&old?.position_seconds>5&&!allowRestartZero&&!done)return Promise.resolve();
+ const payload={user_id:user.id,source:video.source,video_id:video.id,position_seconds:seconds,duration_seconds:duration,completed:done||!!old?.completed||(duration!=null&&duration>0&&seconds/duration>=.97),updated_at:new Date().toISOString()};
+ if(old&&old.position_seconds===seconds&&old.completed===payload.completed)return saveQueue;
+ lastSaved=Date.now();progress.set(videoKey,payload);updateOverall();updateControls();
+ saveQueue=saveQueue.catch(()=>{}).then(async()=>{
+   try{
+     const {error}=await db.from('boniverso_video_progress').upsert(payload,{onConflict:'user_id,source,video_id'});
+     if(error)throw error;
+     if(active&&key(active)===videoKey)$('saveInfo').textContent='Progresso salvo na sua conta · '+formatTime(seconds);
+   }catch(err){
+     if(active&&key(active)===videoKey)$('saveInfo').textContent='Falha ao salvar o progresso: '+textError(err);
+     console.warn('BoniVerso video progress:',err?.message||err);
+     if(progress.get(videoKey)===payload){if(old)progress.set(videoKey,old);else progress.delete(videoKey);}
+   }
+ });
+ return saveQueue;
+}
+function stopPlayer(){if(player){player.pause();player.removeAttribute('src');player.load();player.remove();}player=null;sessionActive=false;}
+async function startVideo(v,forceStart=false){
+ if(active&&player){await saveProgress();stopPlayer()}
+ active=v;seekPending=false;seekTarget=0;allowRestartZero=!!forceStart;
+ updateControls();$('videoTitle').textContent=v.title;
+ $('videoInfo').textContent='Verificando matrícula e preparando reprodução…';
+ $('playerHost').replaceChildren(make('div','Aguarde: verificando seu acesso…','empty'));
+ try{
+   const out=v.source==='meet'?await invoke('boniverso-course-videos',{action:'watch',video_id:v.id}):await invoke('boniverso-recording-playback',{recording_id:v.id});
+   if(!out?.url||typeof out.url!=='string')throw Error('Arquivo ainda não está disponível');
+   const currentVideo=make('video');player=currentVideo;player.className='player';playerConfig(player);
+   const token=key(v),saved=progress.get(token);
+   seekTarget=!forceStart&&saved?.position_seconds>3&&!saved.completed?saved.position_seconds:0;
+   seekPending=seekTarget>0;
+   currentVideo.src=out.url;$('playerHost').replaceChildren(currentVideo);
+   function attemptResume(){
+     if(player!==currentVideo||active?.id!==v.id||!seekPending)return;
+     const duration=currentVideo.duration;
+     if(!Number.isFinite(duration)||duration<=0)return;
+     const desired=Math.min(seekTarget,Math.max(0,duration-2));
+     if(desired<2){seekPending=false;return;}
+     if(Math.abs(currentVideo.currentTime-desired)<1)return; // aguarda seeked ou timeupdate; não salva 0s prematuramente
+     try{
+       currentVideo.currentTime=desired;
+       $('videoInfo').textContent='Retomando aula a partir de '+formatTime(desired)+'…';
+     }catch(err){console.warn('Seek indisponível:',err?.message||err)}
+   }
+   currentVideo.addEventListener('loadedmetadata',()=>{
+     if(player!==currentVideo||active?.id!==v.id)return;
+     if(seekPending)attemptResume();
+     else $('videoInfo').textContent=v.source==='meet'?'📹 Gravação do Google Meet':'🔴 Gravação de aula ao vivo';
+   });
+   currentVideo.addEventListener('canplay',()=>{if(seekPending)attemptResume()});
+   currentVideo.addEventListener('seeked',()=>{
+     if(player!==currentVideo||active?.id!==v.id)return;
+     if(seekPending&&currentVideo.currentTime>=Math.max(0,seekTarget-3)){
+       seekPending=false;
+       $('videoInfo').textContent='Reprodução retomada em '+formatTime(currentVideo.currentTime);
+     }
+   });
+   currentVideo.addEventListener('timeupdate',()=>{
+     if(player!==currentVideo||active?.id!==v.id)return;
+     if(seekPending){
+       if(currentVideo.currentTime>=Math.max(0,seekTarget-3))seekPending=false;
+       else return;
+     }
+     if(Date.now()-lastSaved>5000)saveProgress();
+   });
+   currentVideo.addEventListener('pause',()=>saveProgress());
+   currentVideo.addEventListener('ended',()=>saveProgress(true));
+   currentVideo.addEventListener('error',()=>{
+     if(player!==currentVideo)return;
+     seekPending=false;
+     $('videoInfo').textContent='Falha na reprodução ou link expirado. Clique em Renovar acesso.';
+     $('renew').hidden=false;
+   });
+   sessionActive=true;
+   currentVideo.play().catch(()=>{$('videoInfo').textContent='Toque em ▶ no reprodutor para continuar.'});
+   updateControls();renderList();status('Vídeo selecionado · reprodução autorizada');
+ }catch(e){
+   seekPending=false;
+   $('playerHost').replaceChildren(make('div','Não foi possível reproduzir: '+textError(e),'empty'));
+   $('videoInfo').textContent='Tente novamente ou procure o professor.';
+   status('Acesso não disponível: '+textError(e),true);
+ }
+}
+function moduleGroup(id){return modules.find(m=>m.id===id)?.title||'Aulas sem módulo'}
+function itemButton(v){const b=make('button',null,'video-row'+(active&&key(active)===key(v)?' current':''));b.type='button';const ic=make('span',v.source==='meet'?'📹':'🔴','video-ico');const info=make('span',null,'video-info');info.append(make('b',v.title));const meta=progress.get(key(v));info.append(make('small',(v.source==='meet'?'Meet':'Live')+(meta?.completed?' · ✓ Concluída':meta?.position_seconds?' · Continuar '+formatTime(meta.position_seconds):' · Ainda não iniciada')));const pbar=make('span',null,'progress');const filled=make('span');filled.style.width=percent(v)+'%';pbar.append(filled);info.append(pbar);b.append(ic,info);b.onclick=()=>startVideo(v);return b}
+function renderList(){const q=$('search').value.toLocaleLowerCase('pt-BR').trim();const list=$('list');list.replaceChildren();if(!items.length){list.append(make('div','Nenhuma videoaula publicada neste curso.','empty'));return}
+ const visible=items.filter(v=>v.title.toLocaleLowerCase('pt-BR').includes(q));
+ if(!visible.length){list.append(make('div','Nenhum vídeo encontrado com esse título.','empty'));return}
+ const groups=[...modules.map(m=>({id:m.id,title:m.title})),{id:null,title:'Aulas sem módulo'}];
+ for(const group of groups){const found=visible.filter(v=>(v.module_id||null)===group.id);if(!found.length)continue;const section=make('div',null,'module');section.append(make('h3',group.title+' · '+found.length));for(const v of found){section.append(itemButton(v));if(staff){const wrap=make('div',null,'video-admin');const label=make('label','Organizar em módulo');const select=make('select');select.append(new Option('Sem módulo',''));for(const m of modules)select.append(new Option(m.title,m.id));select.value=v.module_id||'';select.addEventListener('change',async()=>{select.disabled=true;try{await invoke('boniverso-video-modules',{action:'assign',course_id:courseId,video_id:v.id,source:v.source,module_id:select.value||null});v.module_id=select.value||null;status('Módulo atualizado');renderList()}catch(e){select.value=v.module_id||'';status(textError(e),true)}finally{select.disabled=false}});label.append(select);wrap.append(label);section.append(wrap)}}list.append(section)}
+}
+function renderModuleAdmin(){if(!staff)return;const host=$('moduleControls');host.replaceChildren();if(!modules.length){host.append(make('p','Crie um módulo, por exemplo: Introdução, Desenvolvimento e Revisão.','muted'));return}modules.forEach((m,i)=>{const row=make('div',null,'module-item');row.append(make('strong',m.title));const rename=make('button','Renomear','secondary');rename.onclick=async()=>{const title=window.prompt('Novo nome do módulo:',m.title);if(title===null)return;try{await invoke('boniverso-video-modules',{action:'rename',course_id:courseId,module_id:m.id,title});await refreshModules()}catch(e){status(textError(e),true)}};const remove=make('button','Excluir módulo','danger');remove.onclick=async()=>{if(!window.confirm('Excluir este módulo? Os vídeos permanecerão disponíveis no curso, em Aulas sem módulo.'))return;try{await invoke('boniverso-video-modules',{action:'remove',course_id:courseId,module_id:m.id});await refreshModules()}catch(e){status(textError(e),true)}};const up=make('button','↑','secondary'),down=make('button','↓','secondary');up.disabled=i===0;down.disabled=i===modules.length-1;up.title='Subir módulo';down.title='Descer módulo';up.onclick=()=>reorder(i,i-1);down.onclick=()=>reorder(i,i+1);row.append(up,down,rename,remove);host.append(row)})}
+async function reorder(i,j){const ids=modules.map(m=>m.id);[ids[i],ids[j]]=[ids[j],ids[i]];try{await invoke('boniverso-video-modules',{action:'order',course_id:courseId,ordered_ids:ids});await refreshModules()}catch(e){status(textError(e),true)}}
+async function refreshModules(){const d=await invoke('boniverso-video-modules',{action:'list',course_id:courseId});modules=d.modules||[];renderModuleAdmin();renderList()}
+async function load(){
+ if(!valid.test(courseId||''))throw Error('Curso não identificado. Abra a videoteca pela página do seu curso.');
+ if(!cfg?.supabaseUrl||!cfg?.supabasePublishableKey)throw Error('Configuração do BoniVerso não encontrada');
+ db=createClient(cfg.supabaseUrl,cfg.supabasePublishableKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:false}});
+ const {data:{user:person},error:authError}=await db.auth.getUser();if(authError||!person)throw Error('Faça login no BoniVerso para assistir às aulas.');user=person;
+ const {data:role,error:roleError}=await db.rpc('current_staff_role');if(roleError)throw roleError;staff=['teacher','admin'].includes(role);
+ // Respeita a matrícula mesmo para cursos gratuitos; somente contas de equipe podem ver prévias.
+ const {data:c,error:courseError}=await db.from('courses').select('id,title,published').eq('id',courseId).maybeSingle();if(courseError||!c)throw Error('Curso não encontrado ou não autorizado.');course=c;$('courseTitle').textContent='Videoteca · '+course.title;
+ const [modResult,importResult,eventsResult,liveResult,progressResult]=await Promise.all([
+   invoke('boniverso-video-modules',{action:'list',course_id:courseId}),
+   db.from('boniverso_course_videos').select('id,title,course_id,module_id,origin,status,is_published,description').eq('course_id',courseId).eq('status','ready'),
+   db.from('boniverso_live_events').select('id,course_id,classroom_id').eq('course_id',courseId),
+   db.from('boniverso_live_recordings').select('id,event_id,title,module_id,state,is_published,duration_seconds,library_course_id,library_classroom_id,deleted_at').eq('state','ready').is('deleted_at',null),
+   db.from('boniverso_video_progress').select('source,video_id,position_seconds,duration_seconds,completed,updated_at').eq('user_id',user.id)
+ ]);
+ for(const r of [importResult,eventsResult,liveResult,progressResult])if(r.error)throw r.error;
+ modules=modResult.modules||[];
+ const events=new Set((eventsResult.data||[]).map(e=>e.id));
+ const meet=(importResult.data||[]).filter(v=>staff||v.is_published).map(v=>({...v,source:'meet'}));
+ const live=(liveResult.data||[]).filter(v=> (staff||v.is_published) && (v.library_course_id===courseId || (!v.library_classroom_id&&!v.library_course_id&&events.has(v.event_id)))).map(v=>({...v,source:'live'}));
+ items=[...live,...meet];progress=new Map((progressResult.data||[]).map(p=>[p.source+':'+p.video_id,p]));
+ $('admin').hidden=!staff;
+ updateOverall();renderList();renderModuleAdmin();
+ const resume=[...items].filter(v=>{const p=progress.get(key(v));return p?.position_seconds>5&&!p.completed}).sort((a,b)=>(progress.get(key(b))?.updated_at||'').localeCompare(progress.get(key(a))?.updated_at||''))[0];
+ if(resume){$('videoTitle').textContent='Continue assistindo';$('videoInfo').textContent='Você parou em '+formatTime(progress.get(key(resume)).position_seconds)+' de “'+resume.title+'”.';$('continue').hidden=false;$('continue').textContent='▶ Continuar de '+formatTime(progress.get(key(resume)).position_seconds);initialResume=resume;}
+ else if(items.length){$('videoTitle').textContent='Selecione uma aula da lista';}
+ status(staff?'Biblioteca do curso carregada. Você pode organizar os módulos.':'Biblioteca carregada. Vídeos liberados para sua matrícula.');
+}
+$('search').addEventListener('input',renderList);
+$('newModule').addEventListener('submit',async e=>{e.preventDefault();const input=$('moduleName'),title=input.value.trim();if(title.length<2)return;try{await invoke('boniverso-video-modules',{action:'create',course_id:courseId,title});input.value='';await refreshModules();status('Módulo criado')}catch(err){status(textError(err),true)}});
+$('continue').addEventListener('click',()=>{if(!player&&initialResume){startVideo(initialResume);return;}if(player&&active){const p=progress.get(key(active));if(p?.position_seconds>0)player.currentTime=p.position_seconds;player.play().catch(()=>{});}});
+$('restart').addEventListener('click',()=>{if(!player)return;seekPending=false;allowRestartZero=true;player.currentTime=0;player.play().catch(()=>{});saveProgress();});
+$('renew').addEventListener('click',()=>{if(active)startVideo(active)});
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&player)saveProgress()});
+window.addEventListener('pagehide',()=>{if(player)saveProgress()});
+try{await load()}catch(e){status(textError(e),true);$('list').replaceChildren(make('div',textError(e),'empty'));$('overall').textContent='Indisponível'}
+</script>
+</body></html>
